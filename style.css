@@ -3,6 +3,7 @@
   padding: 2em;
   border: 2px solid gainsboro;
 }
+
 .warning-sign {
   display: none;
   color: red;
@@ -16,6 +17,10 @@
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>');
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.conversion {
+  color: red;
 }
 
 .input-wrapper {
@@ -58,6 +63,12 @@
   color: white;
 }
 
+.Calculate-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .modal-content {
   display: flex;
   justify-content: center;
@@ -68,8 +79,11 @@
   margin-top: 7em;
 }
 
-.Calculate-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media only screen and (max-width: 767px) {
+  .taxcalculatorbody {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+    padding: 0em;
+  }
 }
