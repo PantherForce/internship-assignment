@@ -3,7 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Income Tax Estimator</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container mt-5">
+      <div class="taxcalculatorbody">
+        <form id="incomeTaxCalculator">
+          <div class="input-wrapper">
+            <label for="annualIncome">Enter gross annual income</label>
+            <span class="question-mark">?</span>
+            <div class="tooltip-text">
+              Gross annual income is your total salary in a year before any
+              deductions
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              id="annualIncome"
+              placeholder="Enter gross annual income"
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="additionalIncome">Enter extra income</label>
+            <span class="question-mark">?</span>
+            <div class="tooltip-text">
+              extra income is your extra salary in a year before any deductions
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              id="additionalIncome"
+              placeholder="Enter extra income"
+            />
+            <span
+              class="warning-sign"
+              data-toggle="tooltip"
+              title="Please check your input"
+            ></span>
+          </div>
+          <div class="input-wrapper">
+            <label for="userAge">Enter age group</label>
+            <select class="form-control" id="userAge">
+              <option value="">Select your age</option>
+              <option value="<40">Under 40</option>
+              <option value="40-59">Between 40 and 59</option>
+              <option value=">=60">60 or older</option>
+            </select>
+            <span
+              class="warning-sign"
+              data-toggle="tooltip"
+              title="This field is required"
+            ></span>
+          </div>
+          <div class="input-wrapper">
+            <label for="taxDeductions">Enter total applicable deductions</label>
+            <span class="question-mark">?</span>
+            <div class="tooltip-text">
+              deductions happens with your salary example : PF and all
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              id="taxDeductions"
+              placeholder="Enter total applicable deductions"
+            />
+            <span
+              class="warning-sign"
+              data-toggle="tooltip"
+              title="Please check your input"
+            ></span>
+          </div>
+          <div class="Calculate-btn">
+            <button type="submit" class="close-btn">Calculate</button>
+          </div>
+        </form>
+      </div>
+      <div class="modals-body">
+        <div
+          class="modal fade"
+          id="calculationResultModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="modalTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body"></div>
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span class="btn btn-primary" aria-hidden="true">Close</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
